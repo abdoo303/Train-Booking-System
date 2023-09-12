@@ -8,9 +8,8 @@ def generate_token(length=6):
     return ''.join(random.choice(characters) for _ in range(length))
 
 def send_verification_email(reciever):
-    sender = "abdelrahiim303@gmail.com"
-    password= "mjnqnwsfzmdyviki"
-    #    mjnqnwsfzmdyviki
+    sender = "#########@example.com"
+    password= "YOUR-PASSWORD"
 
     subject = 'Verification Code'
     verification_code = generate_token()
@@ -30,9 +29,7 @@ def send_verification_email(reciever):
         smtp.sendmail(sender,reciever,em.as_string())
     return verification_code
 
-reciever = "abdelrahimabdelazim303@gmail.com"
 
-# code = send_verification_email(reciever)
 
 
 
